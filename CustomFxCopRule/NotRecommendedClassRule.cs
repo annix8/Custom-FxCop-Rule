@@ -26,6 +26,7 @@ namespace CustomFxCopRule
 
             return this.Problems;
         }
+        
         public override void VisitAssignmentStatement(AssignmentStatement assignment)
         {
             Expression target = assignment.Target;
@@ -38,7 +39,9 @@ namespace CustomFxCopRule
                     Problems.Add(problem);
                 }
             }
-        }        private bool IsDerivedFromClass(TypeNode typeNode, string classFullName)
+        }
+
+        private bool IsDerivedFromClass(TypeNode typeNode, string classFullName)
         {
             if (typeNode == null)
             {
@@ -48,5 +51,6 @@ namespace CustomFxCopRule
             bool isDerived = typeNode.FullName == classFullName;
 
             return isDerived || IsDerivedFromClass(typeNode.BaseType, classFullName);
-        }    }
+        }
+    }
 }
