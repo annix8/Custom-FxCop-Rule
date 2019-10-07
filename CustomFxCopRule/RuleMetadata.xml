@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Rules FriendlyName="Custom FxCop Rules">
+  <Rule TypeName="NotRecommendedClassRule" Category="MyRules" CheckId="SF0001">
+    <Name>Not recommended class</Name>
+    <Description>Checks for the usage of not recommended classes.</Description>
+    <Resolution>Variable is of type {0} which is not recommended.</Resolution>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Url />
+    <Owner />
+    <Email />
+  </Rule>
+</Rules>
